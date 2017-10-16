@@ -1,42 +1,79 @@
-# JavaScript Assignment 2
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivai Game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<!-- Get a start button -->
+<!-- this is a button click in that starts timer - in java script
+ -->
 
-### Overview
+ <!--    $("#stop").click(stopwatch.stop);
+  $("#reset").click(stopwatch.reset);
+  $("#start").click(stopwatch.start); -->
+</head>
+<body>
+<!--  <p id="demo">Click the button to start the timer</p> -->
 
-In this assignment, You'll create a Trivia game using JavaScript for the logic and jQuery to manipulate HTML. Be sure to layout this app with valid HTML and stylish CSS.
 
-### Before You Begin
 
-1. Create a GitHub repo called `TriviaGame`, then clone the repo to your computer.
 
-2. Create a file inside of the `TriviaGame` folder called `index.html`. This is where you'll mark up all of your HTML.
-3. Don't forget to include a script tag with the jQuery library.
 
-4. Create a folder inside of the `TriviaGame` folder called `assets`.
-5. Inside `assets`, create three folders: `css`, `javascript`, `images`
 
-   * In your `css` folder, create a `style.css` file.
-   * In your `javascript` folder, create an `app.js` file; here you'll write all of your JavaScript and jQuery.
-   * In your `images` folder, save whatever images you'd like to use in this exercise.
+<!--  <button onclick="myFunction()">START</button>
+  <button id="start"> Start CountDown</button>
+    <button id="stop">Stop Button</button>
+    <button id="reset">Stop Button</button> -->
+<!--     <h2 id="timerMain"></h2> -->
 
-6. Choose a game to build from your options below. 
 
-### Option One: Basic Quiz (Timed Form)
+<!-- display question array -->
+ <p class="display"></p>
+ <!-- make a button for possible answers -->
+ <button id="display1" onclick="myFunction()">West</button>
 
-![Basic](Images/1-basic.jpg)
+<p><button id="display1"></p></button>
+<p><button class="display2"></p></button>
+<p><button class="display3"></p></button>
+<p><button class="display4"></p></button>
 
-**[Click Here to Watch the Demo](basic-trivia-demo.mov)**.
+<p id="answerClick"></p>
 
+	<p id="question"></p>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- 
 * You'll create a trivia form with multiple choice or true/false options (your choice).
+Get a start button
+this is a button click in that starts timer - in java script
 
-* The player will have a limited amount of time to finish the quiz. 
+display timer - variable?
 
-  * The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
+Show a question and choices. 
+this can be an object with question and answer one and answer two. 
+Use a button and capture click 
+Check true or false and lock it
+return to variable true of false.
 
-* Don't let the player pick more than one answer per question.
 
-* Don't forget to include a countdown timer.
+end game when countdown time goes to zero and show results.
+when clock ends show answer sheet
+show how many correct and how many incorrect.  
 
-### Option Two: Advanced Assignment (Timed Questions)
+
+
+
+
+
+
 
 ![Advanced](Images/2-advanced.jpg)
 
@@ -55,22 +92,10 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 
 - - -
 
-### Minimum Requirements
 
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
-
-- - -
 
 ### A Few Last Notes
 
 * Styling and theme are completely up to you. Get creative!
 
-* Remember to deploy your assignment to Github Pages.
-
-*If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
-
-  **Good Luck!**
-
-## Copyright
-
-Coding Boot Camp (C) 2016. All Rights Reserved.
+ -->
