@@ -1,119 +1,135 @@
+  // Variable and declarations
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+    var time = 10;
+    var correct = 0;
+    var incorrect = 0;
+    var misses = 0;
+    var timer;     // Interval Timer
 
-// var timer=10000;
-      
-// // win widows starts activate some functions
-// window.onload = setInterval(function(){ myTimer() }, 1000); {
-
-
-//   $("#stop").click(stopwatch.stop);
-//   $("#reset").click(stopwatch.reset);
-//   $("#start").click(stopwatch.start);
-//   $("#count").click(stopwatch.count)
-// };
-// var count = {		
-// 		count: function(){
-// 		timer.time--;
-// 		$("#display").html(timer);
-
-// $("#display").html(timer)count: function(){
-// 	},
-
-// }}
-// start timer on hold for now
-    
-
-// Show Questions and Choices
-    // object use:=
-
-//  var question = {
-// 	question1:"the sun rises in the",
-// 	answer1      :"west",
-// 	answer3      :"north",
-// 	answer2		 :"south",
-// 	answer4      :"east",
-// 	correctanswer:"west",
-	
-
-// 	formQuestion : function() {
-// 		return this.question1 + this.answer1 +  this.answer2 +  this.answer3 +  this.answer4;
-// 	   }
-// };
-
-
-
-// document.getElementById("question").innerHTML = question.formQuestion();
-
-
-
-
-// if correctanswer=(true) "correct"
-// 	wins=++
-// 	else next question
-//     losses=++
-// // evaluate answer with if statement
-// // if answer1
-
-
-
-// Post Score
-
-// set arrays of questions to fill object:
-
-// questions: 
-
-
-
-//  var question = {
-
-// Show Question
-var question1 ="the sun rises in the?";
-// Display Question
-$(".display").html(question1);
-// Set Array of answers
-var	answers = ["west","south","east","north","west"];
-// Set a variable for each answer
-var an1=(answers.slice(0)[0]);
-$(".display1").html(an1);
-var an2=(answers.slice(1)[0]);
-$(".display2").html(an2);
-var an3=(answers.slice(2)[0]);
+var answers = ["west","south","east","north","east"];
+// note that last value in each array matches correct answer
+an1=answers.slice(0)[0];
+$("#display1").text(an1);
+an2=(answers.slice(1)[0]);
+$(".display2").html("an2");
+an3=(answers.slice(2)[0]);
 $(".display3").html(an3);
-var an4=(answers.slice(3)[0]);
+an4=(answers.slice(3)[0]);
 $(".display4").html(an4);
-// Tag a button with an answer
-function myFunction() {
+var question1 = "the sun rises in the?";
+$(".display").html(question1);
 
-    document.getElementById("display1").innerHTML = "You Picked " + an1;
+
+$(document).ready(function(){
+
+    $("#start-button").on("click", function(){
+
+        //test button click
+        console.log("button clicked");
+        
+        //clears div content.
+         $(".content").empty();
+
+        // Appends h1 tag for timer.
+        $(".content").append("<h1>Time: <span id='time'>"+ time +"</></h1>");
+
+        //Interval Timer.
+        // Every 1s (1000ms) callback function is executed.
+            timer = setInterval(function(){
+            time--;
+            $("#time").html(time);
+
+            //condition to stop timer/ check questions
+            if(time < 1){
+                clearInterval(timer);
+                // checkAnswers();
+            }   
+        }, 1000);
+    
+    // $(document).on("click", "#done", function(){
+    //         clearInterval(timer);
+    //   $("#content").append("<br><br><br><br><button id='done'>DONE</button>");  
+    // });
+
+
+});
+    $("#display1").on("click", function myFunction() {
+    console.log("click1");
+    alert ("You Selected " + an1);
+    correctanswer=answers.slice(-1)[0];
     useranswer=an1;
-correctanswer=(answers.slice(-1)[0]);
-if (useranswer==correctanswer)
-{
-alert("you guessed right");
+
+
+    if (useranswer===correctanswer){
+            alert("you guessed right");
+            correct++;        
 }
-else{
-alert("wrong!");
-};
+   if (useranswer!=correctanswer){
+        alert("wrong!");
+        alert("the correct answer was " + correctanswer);
+        incorrect++;
+ }
+ $(".correct").append("<h3>Correct: "+ correct + "</h3>"); 
+        $(".incorrect").append("<h3>Incorrect:"+ incorrect + "</h3>");
+  }); 
+   
+    $("#display2").on("click",function myFunction() {
+    console.log("click1");
+    alert ("You Selected " + an2);
+    correctanswer=answers.slice(-1)[0];
+    useranswer=an2;
+
+
+    if (useranswer===correctanswer){
+            alert("you guessed right");
+           correct++;
 }
-// set the user answer response as a new variable
-// var useranswer=(myFunction);
-// Set a variable for correct answer in each array to be the last string
-// var correctanswer=(answers.slice(-1)[0]);
-// // evaluate answer
-// if (useranswer==correctanswer)
-// {
-// alert("you guessed right");
-// }
-// else{
-// alert("wrong!");
-// };
 
+   if (useranswer!=correctanswer){
+        alert("wrong!");
+        alert("the correct answer was " + correctanswer);
+        incorrect++;  
+}
+$(".correct").append("<h3>Correct: "+ correct + "</h3>"); 
+        $(".incorrect").append("<h3>Incorrect:"+ incorrect + "</h3>");
+});
+$("#display3").on("click",function myFunction() {
+    console.log("click1");
+    alert ("You Selected " + an3);
+    correctanswer=answers.slice(-1)[0];
+    useranswer=an3;
 
-// function myfunction() {
-//   var sub = $('#input').val();
-//   console.log(sub);
-// }
+    if (useranswer===correctanswer){
+            alert("you guessed right");
+            correct++;
+        }
+           
+   if (useranswer!=correctanswer){
+        alert("wrong!");
+        alert("the correct answer was " + correctanswer);
+          incorrect++;
+      }
+      $(".correct").html("<h3>Correct: "+ correct + "</h3>"); 
+        $(".incorrect").html("<h3>Incorrect:"+ incorrect + "</h3>");
+});
+$("#display4").on("click",function myFunction() {
+    console.log("click1");
+    alert ("You Selected " + an4);
+    correctanswer=answers.slice(-1)[0];
+    useranswer=an4;
+   
+    
+    if (useranswer===correctanswer){
+            alert("you guessed right");
+            correct++;
+        }
+   if (useranswer!=correctanswer){
+        alert("wrong!");
+        alert("the correct answer was " + correctanswer);
+          incorrect++;
+      }
+      $(".correct").html("<h3>Correct: "+ correct + "</h3>"); 
+        $(".incorrect").html("<h3>Incorrect: "+ incorrect + "</h3>");
+});
+});
 
-// <input type="text" id="input">
-// <button id="buttton" class="button" onclick="myfunction()">Create Envelope</button>
-// <input type="text" id='input'>
-// <button id="buttton" class="button" onclick="myfunction()">Create Envelope</button>

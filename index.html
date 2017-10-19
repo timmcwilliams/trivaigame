@@ -2,48 +2,44 @@
 <html>
 <head>
 	<title>Trivai Game</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<!-- Get a start button -->
-<!-- this is a button click in that starts timer - in java script
- -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
 
- <!--    $("#stop").click(stopwatch.stop);
-  $("#reset").click(stopwatch.reset);
-  $("#start").click(stopwatch.start); -->
 </head>
 <body>
-<!--  <p id="demo">Click the button to start the timer</p> -->
+<div class="container text-center">
+	<div class="jumbotron">
+		<div class="container text-center">
+
+			<button class="btn btn-primary" id="start-button">Start Game and Timer</button>
+			<p class="content"></p>
+			<p class="time"></p>
+			<p class="display"></p>
+
+
+			<p><button id="display1"></button></p>
+			<p><button id="display2">north</button></p>
+			<p><button id="display3">east</button></p>
+			<p><button id="display4">south</button></p>
+			<p id="answerClick"></p>
+			<p id="question"></p>
+		</div>
+	</div>
+	<div class="bgimg">
+	<!-- w3-display-container">  -->
+	<!-- w3-animate-opacity w3-text-blue"> -->
+		<p class="correct"></p>
+		<p class="incorrect"></p>
+	</div>
+	</div>
 
 
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
-
-<!--  <button onclick="myFunction()">START</button>
-  <button id="start"> Start CountDown</button>
-    <button id="stop">Stop Button</button>
-    <button id="reset">Stop Button</button> -->
-<!--     <h2 id="timerMain"></h2> -->
-
-
-<!-- display question array -->
- <p class="display"></p>
- <!-- make a button for possible answers -->
- <button id="display1" onclick="myFunction()">West</button>
-
-<p><button id="display1"></p></button>
-<p><button class="display2"></p></button>
-<p><button class="display3"></p></button>
-<p><button class="display4"></p></button>
-
-<p id="answerClick"></p>
-
-	<p id="question"></p>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	<script type="text/javascript" src="assets/javascript/appalt1.js"></script>
 </body>
 </html>
 
@@ -81,7 +77,7 @@ show how many correct and how many incorrect.
 
 * You'll create a trivia game that shows only one question until the player answers it or their time runs out.
 
-* If the player selects the correct answer, show a screen congratulating them for choosing the right option. After a few seconds, display the next question -- do this without user input.
+* If the player selects the correct answer, show a screen congratulating them for choosing the right option. After a few seconds, display the next question  do this without user input.
 
 * The scenario is similar for wrong answers and time-outs.
 

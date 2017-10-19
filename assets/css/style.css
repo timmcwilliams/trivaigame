@@ -1,0 +1,22 @@
+/*
+.jumbotron {
+  background-image: url('https://goo.gl/04j7Nn');
+  height: 500px;
+}
+.jumbotron h1 {
+color:black;
+font-size:48px;
+font-weight:bold
+font-family:'Shift', sans-serif;
+}
+.jumbotron p {
+    color:#fff;
+    font-size:20px;
+    }*/
+
+
+.bgimg {
+    background-image: url("../images/caddyshack080417_8col.jpg");
+    min-height: 100%;
+    background-position: center;
+}
