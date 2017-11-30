@@ -7,7 +7,12 @@
     var timer;     // Interval Timer
 
 var answers = ["west","south","east","north","east"];
-// note that last value in each array matches correct answer
+// note that last value in each array matches correct answer so can use as the key to finding correct or incorrect
+var question1 = "the sun rises in the?";
+$(".display").html(question1);
+
+
+
 an1=answers.slice(0)[0];
 $("#display1").text(an1);
 an2=(answers.slice(1)[0]);
@@ -16,8 +21,7 @@ an3=(answers.slice(2)[0]);
 $(".display3").html(an3);
 an4=(answers.slice(3)[0]);
 $(".display4").html(an4);
-var question1 = "the sun rises in the?";
-$(".display").html(question1);
+
 
 
 $(document).ready(function(){
